@@ -1,0 +1,117 @@
+@use 'base';
+
+
+@media screen and (max-width: 768px) and (min-width: 426px) {
+    h1 {
+        text-align: center;
+        font-family: 'Fraunces 144pt';
+        font-weight: 600;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    h3 {
+        text-align: justify;
+        font-size: 1.75rem;
+        line-height: 2.25rem;
+    }
+
+
+    p {
+        text-align: justify;
+        font-size: 1rem;
+        line-height: 1.75rem;
+    }
+
+
+
+    // SECTION 1 //////////////////////////////////////////////////////////////////////////////////////////////////
+    .elliptic-bottom {
+        clip-path: ellipse(110% 100% at 50% 0%);
+    }
+
+    #banner {
+        padding-bottom: 32%;
+    }
+
+    #hero {
+        width: 72%;
+        bottom: -30%;
+    }
+
+    #bg-pattern-1 {
+        display: block;
+        width: 34%;
+        left: -22%;
+        top: 27%;
+    }
+
+    #bg-pattern-2 {
+        display: block;
+        right: -10%;
+        top: 30%;
+    }
+
+    // SECTION 2 //////////////////////////////////////////////////////////////////////////////////////////////////
+
+    #description {
+        margin: 0 4rem 0 10rem;
+    }
+
+    .counter-item {
+        margin-top: 3rem;
+
+        &::before {
+            top: calc(50% - .5rem);
+            left: -4rem;
+        }
+
+        >*:first-child {
+            margin-bottom: 1rem;
+        }
+    }
+
+
+
+    // SECTION 3 //////////////////////////////////////////////////////////////////////////////////////////////////
+
+    #biography {
+        padding: 24% 2.5rem 18% 30%;
+
+        img {
+            &[data-role="main"] {
+                width: 34%;
+                top: 7%;
+                left: 5%;
+            }
+
+            &[data-role="pattern"] {
+                display: block;
+                width: 23%;
+                top: 63%;
+                left: 76%;
+            }
+        }
+
+        button {
+            margin-top: .5rem;
+        }
+    }
+
+    .box3 {
+        place-items: start;
+        text-align: left;
+        padding: 3rem;
+    }
+
+
+    // FOOTER //////////////////////////////////////////////////////////////////////////////////////////////////
+
+    footer {
+        margin-bottom: 3rem;
+    }
+}
