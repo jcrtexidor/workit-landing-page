@@ -1,0 +1,297 @@
+// FONTS AND VARIABLES //////////////////////////////////////////////////////////////////////////////////////////////////
+@font-face {
+    font-family: "Fraunces 144pt";
+    src: url("./assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "Fraunces-Variable";
+    src: url("./assets/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf");
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("./assets/fonts/manrope/static/Manrope-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Manrope-Variable";
+    src: url("./assets/fonts/manrope/Manrope-VariableFont_wght.ttf");
+}
+
+$Dark-Purple: #24053E;
+$Eucaplyptus: #44FFA1;
+$Davys-Grey: #584D62;
+$Ghost-White: #FCF8FF;
+$White: #FFF;
+
+// SMALL CLASSES //////////////////////////////////////////////////////////////////////////////////////////////////
+.fg-white {
+    color: $White;
+}
+
+.fg-davys-grey {
+    color: $Davys-Grey;
+}
+
+.fg-dark-purple {
+    color: $Dark-Purple;
+}
+
+.bg-dark-purple {
+    background-color: $Dark-Purple;
+}
+
+// GENERAL STYLES //////////////////////////////////////////////////////////////////////////////////////////////////
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $Ghost-White;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    place-content: space-evenly;
+    gap: 100px;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+
+.btn-primary {
+    font-family: 'Manrope';
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2rem;
+    outline: none;
+    color: $Dark-Purple;
+    background-color: $Eucaplyptus;
+    padding: 13px 24.5px 16px 25.5px;
+    border: none;
+
+    &:hover {
+        color: $Eucaplyptus;
+        background-color: transparent;
+        padding: 11px 22.5px 14px 23.5px;
+        border: 2px solid $Eucaplyptus;
+    }
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Fraunces 144pt';
+    font-style: normal;
+    font-size: 3.125rem;
+    font-weight: 600;
+    line-height: 3.125rem;
+}
+
+h2 {
+    font-family: 'Fraunces 144pt';
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+h3 {
+    font-family: 'Fraunces 144pt';
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+}
+
+p {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.75rem;
+}
+
+
+
+
+
+// SECTION 1//////////////////////////////////////////////////////////////////////////////////////////////////
+.elliptic-bottom {
+    clip-path: ellipse(150% 100% at 50% 0%);
+}
+
+.underlined {
+    border: none;
+    text-decoration: underline $Eucaplyptus 3px;
+    text-underline-offset: 8px;
+}
+
+.btn-secondary {
+    @extend .underlined;
+    font-family: Manrope;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2rem;
+    color: $White;
+    background-color: transparent;
+
+    &:hover {
+        color: $Eucaplyptus;
+    }
+}
+
+#home-header {
+    position: relative;
+    margin-bottom: 20%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow-y: visible;
+    overflow-x: clip;
+}
+
+#banner {
+    padding: 1rem 2rem 50% 2rem;
+    width: 100%;
+    display: grid;
+    row-gap: 2.5rem;
+    grid-template-areas:
+        "logo applyForAccess"
+        "tittle tittle"
+        "learMore learMore";
+
+    :nth-child(1) {
+        grid-area: logo;
+        justify-self: flex-start;
+    }
+
+    :nth-child(2) {
+        grid-area: applyForAccess;
+        justify-self: flex-end;
+    }
+
+    :nth-child(3) {
+        grid-area: tittle;
+        justify-self: stretch;
+    }
+
+    :nth-child(4) {
+        grid-area: learMore;
+        justify-self: center;
+    }
+
+}
+
+#bg-pattern-1,
+#bg-pattern-2,
+#bg-pattern-3 {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+#hero {
+    position: absolute;
+    z-index: 1;
+    width: 90vw;
+    bottom: -15%;
+    margin-left: 7%;
+}
+
+// SECTION 2 //////////////////////////////////////////////////////////////////////////////////////////////////
+
+#description {
+    margin: 0 1rem;
+}
+
+
+.counter-wrapper {
+    counter-reset: i;
+}
+
+.counter-item {
+    position: relative;
+    margin-top: 4rem;
+
+    &::before {
+        content: counter(i);
+        counter-increment: i;
+        display: inline-block;
+        position: absolute;
+        top: -2.5rem;
+        left: calc(50% - 1rem);
+        width: 2rem;
+        height: 2rem;
+        border: 1px solid $Davys-Grey;
+        border-radius: 50%;
+        font-size: 1.25rem;
+        text-align: center;
+        line-height: 2rem;
+    }
+}
+
+// SECTION 3 //////////////////////////////////////////////////////////////////////////////////////////////////
+
+#biography {
+    position: relative;
+    padding: 70% 1rem 0 1rem;
+
+    img {
+        position: absolute;
+
+        &[data-role="main"] {
+            z-index: -1;
+            width: 70%;
+            top: 4%;
+            left: 15%;
+        }
+
+        &[data-role="pattern"] {
+            display: none;
+        }
+    }
+
+    button {
+        margin-top: 2rem;
+    }
+}
+
+.box3 {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+// FOOTER //////////////////////////////////////////////////////////////////////////////////////////////////
+
+footer {
+    margin-bottom: 2rem;
+}
+
+
+#logos {
+    width: min-content;
+    display: grid;
+    grid-template: auto auto / 1fr 1fr 1fr;
+    row-gap: 50px;
+    column-gap: 30px;
+    place-items: center;
+    place-content: center;
+
+    & :first-child {
+        grid-column: span 3;
+    }
+}
