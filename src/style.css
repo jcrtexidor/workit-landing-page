@@ -331,7 +331,7 @@ footer {
     margin-bottom: 3rem;
   }
 }
-@media screen and (min-width: 769px) {
+@media screen and (max-width: 1199px) and (min-width: 769px) {
   .btn-primary {
     font-size: 1.125rem;
   }
@@ -392,6 +392,110 @@ footer {
     place-items: start;
     text-align: left;
     padding: 4rem;
+  }
+  .box3 p {
+    text-align: justify;
+  }
+  footer {
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .btn-primary {
+    font-size: 3rem;
+    line-height: 4rem;
+    padding: 23px 34.5px 26px 35.5px;
+  }
+  .btn-primary:hover {
+    padding: 21px 32.5px 24px 33.5px;
+  }
+  .btn-secondary {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+  h1 {
+    font-size: 7rem;
+    line-height: 5rem;
+  }
+  h2 {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+  h3 {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+  p {
+    font-size: 2rem;
+    line-height: 3.5rem;
+  }
+  ul {
+    margin: 0 3rem;
+    display: flex;
+    gap: 4rem;
+  }
+  .btn-secondary {
+    font-size: 1.125rem;
+  }
+  .elliptic-bottom {
+    clip-path: ellipse(110% 100% at 50% 0%);
+  }
+  #banner {
+    padding-bottom: 32%;
+  }
+  #hero {
+    width: 50%;
+    bottom: -28%;
+  }
+  #bg-pattern-1 {
+    display: block;
+    left: -10%;
+    top: 27%;
+    width: 22%;
+  }
+  #bg-pattern-2 {
+    display: block;
+    left: 94%;
+    top: 48%;
+    width: 14%;
+  }
+  .counter-item {
+    margin-top: 4rem;
+  }
+  .counter-item::before {
+    content: counter(i);
+    top: -7.5rem;
+    left: calc(50% - 1rem);
+    width: 5rem;
+    height: 5rem;
+    font-size: 3rem;
+    line-height: 4.5rem;
+  }
+  #biography {
+    padding: 24% 5rem 18% 34%;
+  }
+  #biography img[data-role=main] {
+    width: 30%;
+    top: 13%;
+    left: 8%;
+  }
+  #biography img[data-role=pattern] {
+    display: block;
+    width: 16%;
+    top: 63%;
+    left: 76%;
+  }
+  #biography button {
+    margin-top: 0.5rem;
+  }
+  .box3 {
+    place-items: start;
+    text-align: left;
+    padding: 7rem;
+    gap: 4rem;
+  }
+  .box3 p {
+    text-align: justify;
   }
   footer {
     margin-bottom: 3rem;
